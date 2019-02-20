@@ -1,0 +1,8 @@
+Line 19 is no longer functional due to an update Reddit made to their API. Read more here:
+https://stackoverflow.com/questions/53988619/praw-6-get-all-submission-of-a-subreddit
+Changed line 24 	from 
+	for submissions in sub_submissions: 
+		to
+	for submission in subreddit.hot(limit=100):
+The algorithm no longer picks submissions from  a time interval (time_start, time_end) as intended. It picks the first 100 posts sorted by hot. 
+ I have no idea how to make it work as originally intended : ^ )
